@@ -11,8 +11,6 @@ def run_vending_machine(inputs):
             # Ignore invalid coin denominations
             continue
         amount_due -= coin
-        if amount_due <= 0:
-            break
     return abs(amount_due)
 
 def main():
