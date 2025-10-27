@@ -39,11 +39,12 @@ jobs:
       run: |
         echo "Running unit tests..."
         export PYTHONPATH=$PYTHONPATH:$(pwd)
-        pytest --maxfail=1 --disable-warnings -q
+        pytest --maxfail=1 --disable-warnings | tee pytest.log
+        
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: pytest--results
-        path: ./tests/__pycache__
+        path: ./pytest.log
         
