@@ -38,6 +38,7 @@ jobs:
     - name: Test with pytest
       run: |
         echo "Running unit tests..."
+        export PYTHONPATH=$PYTHONPATH:$(pwd)
         pytest --maxfail=1 --disable-warnings -q
     - name: Upload test results
       if: always()
