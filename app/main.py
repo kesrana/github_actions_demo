@@ -17,7 +17,7 @@ def run_vending_machine(inputs):
 
 def main():
     #this function is for user interaction (OG function)
-    mount_due = 50
+    amount_due = 50
     while amount_due > 0:
         print(f"Amount Due: {amount_due}")
         user_input = input("Insert Coin: ")
